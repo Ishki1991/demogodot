@@ -1,5 +1,5 @@
 extends Area2D
-
+@onready var imagen_mori = $"../TextureRect"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,3 +15,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 	print("¡El jugador tocó un enemigo!")
 	print("Nombre del cuerpo: ", body.name)
+	
+	imagen_mori.visible = true
